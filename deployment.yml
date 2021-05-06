@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: m2-lincoln
+  labels:
+    app: m2-lincoln
+spec:
+  selector:
+    matchLabels:
+      app: m2-lincoln
+  replicas: 1
+  strategy:
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        app: m2lincoln
+    spec:
+      containers:
+        - name: m2-lincoln
+          image: 152512582646.dkr.ecr.us-east-2.amazonaws.com/dev:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 9090
