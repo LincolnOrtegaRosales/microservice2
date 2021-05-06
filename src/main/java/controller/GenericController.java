@@ -12,7 +12,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 @RestController
-@RequestMapping("/m2-lincoln")
+@RequestMapping("")
 @RequiredArgsConstructor
 public class GenericController {
 
